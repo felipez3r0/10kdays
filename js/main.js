@@ -20,8 +20,11 @@ var dates = {
 
 $("#calcular").click(function(){
   data_fmt = $("#field-data").val().split("/");
-  // Check date format
-  if($("#calcular").attr('date-format') == 'pt-br'){
+
+  // Check language
+  lang = $(this).attr('date-format');
+
+  if(lang == 'pt-br'){
     data_fmt.reverse();
   } else {
     data_fmt = [data_fmt[2],data_fmt[0],data_fmt[1]];
@@ -29,9 +32,19 @@ $("#calcular").click(function(){
   data_fmt[1] = data_fmt[1] - 1;
 
   data1 = dates.convert(data_fmt);
-  data2 = dates.convert([1989,02,12])
+  data2 = dates.convert([1989,02,12]);
+  n_data = dates.daysBetween(data2,data1);
+  $("#result-data").html(n_data);
 
-  $("#result-data").html(dates.daysBetween(data2,data1));
+  if(lang == 'pt-br'){
+    msg_post = 'No%20dia%20'+n_data+'%20....%20%2310kDays%20%23MozillaBrasil';
+  } else {
+    msg_post = 'In%20day%20'+n_data+'%20....%20%2310kDays';
+  }
+
+  twitter_link = 'https://twitter.com/intent/tweet?text=';
+  $(".twitter-share").attr('href',twitter_link+msg_post)
+
   $(".box-result").show();
 });
 
