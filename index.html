@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta charset="utf-8" />
+    <title>10.000 Dias da Web</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet" type="text/css">
+    <link href="css/main.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+    <div class="container">
+      <div class="panel panel-calc panel-danger">
+        <div class="panel-heading">
+          <h2 class="text-center">Mozilla - 10.000 Dias da Web!</h2>
+        </div>
+        <div class="panel-body">
+          <p>
+            Dia 28 de julho estaremos celebrando 10.000 Dias da Web!<br>
+            É um divertido e interessante marco que estamos deixando para trás. Esperamos que vocês sejam parte dessa celebração online com a hashtag <strong>#10kDays</strong> e <strong>#MozillaBrasil</strong>
+          </p>
+          <input type="date" placeholder="Digite a data aqui - Formato: dia/mês/ano" name="field-data" id="field-data" class="form-control" />
+          <br />
+          <div class="box-result">
+            <p class="big-txt">
+              Entre os 10 mil dias de Web esse é o dia de número: <strong><span id="result-data"></span></strong>
+            </p>
+            <br>
+          </div>
+          <div class="text-center">
+            <button type="button" id="calcular" class="btn btn-danger">Qual dos 10mil dias foi esse?</button>
+          </div>
+        </div>
+      </div>
+  </div>
+  <!-- Javascript -->
+  <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+  <script src="js/mask.js"></script>
+  <script src="js/main.js"></script>
+</body>
+
+</html>
