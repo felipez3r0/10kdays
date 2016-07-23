@@ -20,7 +20,12 @@ var dates = {
 
 $("#calcular").click(function(){
   data_fmt = $("#field-data").val().split("/");
-  data_fmt.reverse();
+  // Check date format
+  if($("#calcular").attr('date-format') == 'pt-br'){
+    data_fmt.reverse();
+  } else {
+    data_fmt = [data_fmt[2],data_fmt[0],data_fmt[1]];
+  }
   data_fmt[1] = data_fmt[1] - 1;
 
   data1 = dates.convert(data_fmt);
