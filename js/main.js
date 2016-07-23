@@ -16,7 +16,7 @@ var dates = {
       var difference_ms = date2_ms - date1_ms;
       return Math.round(difference_ms/one_day);
     }
-}
+};
 
 $("#calcular").click(function(){
   data_fmt = $("#field-data").val().split("/");
@@ -43,7 +43,7 @@ $("#calcular").click(function(){
   }
 
   twitter_link = 'https://twitter.com/intent/tweet?text=';
-  $(".twitter-share").attr('href',twitter_link+msg_post)
+  $(".twitter-share").attr('href',twitter_link+msg_post);
 
   $(".box-result").show();
 });
